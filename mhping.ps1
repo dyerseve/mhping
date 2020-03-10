@@ -1,14 +1,27 @@
 <#
-v2 Military time and fixed schtask script to execution bypass
-Intial release: change $Computers and $ComputersScope to the same entries as needed.
+v0.1.2 Changed to start and stop times rather than loop counting which was inaccurate
+v0.1.1 Changed to Military time
+v0.1 Intial release: change $Computers and $ComputersScope to the same entries as needed.
 
 #>
+#Variables
+#How long to run in minutes
+$Duration = 600
+#List of systems to ping
+$Computers = "192.168.0.2","192.168.0.12","8.8.8.8","www.microsoft.com","127.0.0.1","192.168.0.9","192.168.0.67","192.168.0.77","192.168.0.97","192.168.0.60"
 
-$LoopCount = 20000
+#Setup time period
+$TimeStart = Get-Date
+$TimeEnd = $timeStart.addminutes($Duration)
+Write-Host "Start Time: $TimeStart"
+write-host "End Time:   $TimeEnd"
 
 workflow PingTest{
-    $Computers = "192.168.0.2","192.168.0.12","8.8.8.8","www.microsoft.com","127.0.0.1","192.168.0.9","192.168.0.67","192.168.0.77","192.168.0.97","192.168.0.60"
+	Param (
+        $Computers
+    )
     foreach -parallel ($Computer in $Computers){
+		Write-Host $Computer
         $Time = Get-Date -format "yyyy-MM-dd HH:mm:ss"
         $TestResult = Test-Connection -ComputerName $Computer -Count 1 -ErrorAction SilentlyContinue
         inlinescript{
@@ -22,17 +35,20 @@ workflow PingTest{
         }
     }
 }
-Clear-Host
-$i = 0
-$ComputersScope = "192.168.0.2","192.168.0.12","8.8.8.8","www.microsoft.com","127.0.0.1","192.168.0.9","192.168.0.67","192.168.0.77","192.168.0.97","192.168.0.60"
-while($i -lt $LoopCount ){
-    $Now = Get-Date
-    Write-Host $Now "Testing..." -NoNewline
-    PingTest
-    Write-Host "Sleeping..."
-    Start-Sleep 1
-$i++
+#Clear-Host
+#$i = 0
+#$ComputersScope = "192.168.0.2","192.168.0.12","8.8.8.8","www.microsoft.com","127.0.0.1","192.168.0.9","192.168.0.67","192.168.0.77","192.168.0.97","192.168.0.60"
+Do { 
+    $TimeNow = Get-Date
+    if ($TimeNow -ge $TimeEnd) {
+		Write-host "Exiting..."
+	} else {
+		PingTest($Computers)
+		Write-Host "Sleeping..."
+	}
+	Start-Sleep 1
 }
+Until ($TimeNow -ge $TimeEnd)
 foreach ($ComputerScope in $ComputersScope){
     $Time = Get-Date -format "yyyy-MM-dd-HH-mm-ss"
     Write-Host $Time
