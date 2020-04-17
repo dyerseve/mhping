@@ -10,6 +10,22 @@ $Duration = 600
 #List of systems to ping
 $Computers = "192.168.0.2","192.168.0.12","8.8.8.8","www.microsoft.com","127.0.0.1","192.168.0.9","192.168.0.67","192.168.0.77","192.168.0.97","192.168.0.60"
 
+#Debugging
+#$DebugPreference = "Continue"
+#Logging feature
+#$ErrorActionPreference="SilentlyContinue"
+try { Stop-Transcript | out-null } catch { }
+
+#start a transcript file
+try { Start-Transcript -path $scriptLog } catch { }
+
+#current script directory
+$scriptPath = split-path -parent $MyInvocation.MyCommand.Definition
+#current script name
+$path = Get-Location
+$scriptName = $MyInvocation.MyCommand.Name
+$scriptLog = "$scriptPath\log\$scriptName.log"
+
 #Setup time period
 $TimeStart = Get-Date
 $TimeEnd = $timeStart.addminutes($Duration)
@@ -21,10 +37,13 @@ workflow PingTest{
         $Computers
     )
     foreach -parallel ($Computer in $Computers){
-		Write-Host $Computer
-        $Time = Get-Date -format "yyyy-MM-dd HH:mm:ss"
-        $TestResult = Test-Connection -ComputerName $Computer -Count 1 -ErrorAction SilentlyContinue
+#		Write-Host pinging $Computer
+#        $Time = Get-Date -format "yyyy-MM-dd HH:mm:ss"
+#        $TestResult = Test-Connection -ComputerName $Computer -Count 1 -ErrorAction SilentlyContinue
         inlinescript{
+			Write-Host pinging $Computer
+			$Time = Get-Date -format "yyyy-MM-dd HH:mm:ss"
+			$TestResult = Test-Connection -ComputerName $Computer -Count 1 -ErrorAction SilentlyContinue
             if ($using:TestResult.ResponseTime -eq $null){
                 $ResponseTime = -1
             } else {
@@ -56,3 +75,4 @@ foreach ($ComputerScope in $ComputersScope){
     Write-Host $newfilename
     Rename-Item -NewName $newfilename -Path "C:\scripts\mhping\ping$ComputerScope.csv"
 }
+try { Stop-Transcript | out-null } catch { }
