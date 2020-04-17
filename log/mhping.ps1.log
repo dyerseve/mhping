@@ -1,0 +1,169 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200417171743
+Username: FAMILY-PC\dyerseve
+RunAs User: FAMILY-PC\dyerseve
+Configuration Name: 
+Machine: FAMILY-PC (Microsoft Windows NT 10.0.18362.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass -noprofile -file .\mhping.ps1
+Process ID: 17584
+PSVersion: 5.1.18362.752
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.752
+BuildVersion: 10.0.18362.752
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\users\dyerseve\Documents\GitHub\mhping\log\mhping.ps1.log
+
+
+    Directory: C:\users\dyerseve\Documents\GitHub\mhping
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        4/17/2020   5:17 PM                results
+Start Time: 04/17/2020 17:17:43
+End Time:   04/17/2020 17:18:43
+Testing the following addresses:
+192.168.98.1
+192.168.98.253
+8.8.8.8
+
+
+    Directory: C:\users\dyerseve\Documents\GitHub\mhping\results
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        4/17/2020   5:17 PM            211 ping192.168.98.1.csv
+-a----        4/17/2020   5:17 PM            217 ping192.168.98.253.csv
+-a----        4/17/2020   5:17 PM            199 ping8.8.8.8.csv
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+scriptPath: C:\users\dyerseve\Documents\GitHub\mhping
+Sleeping...
+Exiting...
+2020-04-17T17-18-44-37
+C:\users\dyerseve\Documents\GitHub\mhping\results2020-04-17T17-18-44-37ping192.168.98.1.csv
+Rename-Item : Cannot rename because item at 'C:\scripts\mhping\ping.csv' does not exist.
+At C:\users\dyerseve\Documents\GitHub\mhping\mhping.ps1:102 char:5
++     Rename-Item -NewName $newfilename -Path "C:\scripts\mhping\ping$C ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Rename-Item], PSInvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperation,Microsoft.PowerShell.Commands.RenameItemCommand
+Rename-Item : Cannot rename because item at 'C:\scripts\mhping\ping.csv' does not exist.
+At C:\users\dyerseve\Documents\GitHub\mhping\mhping.ps1:102 char:5
++     Rename-Item -NewName $newfilename -Path "C:\scripts\mhping\ping$C ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Rename-Item], PSInvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperation,Microsoft.PowerShell.Commands.RenameItemCommand
+
+2020-04-17T17-18-44-56
+C:\users\dyerseve\Documents\GitHub\mhping\results2020-04-17T17-18-44-56ping192.168.98.253.csv
+Rename-Item : Cannot rename because item at 'C:\scripts\mhping\ping.csv' does not exist.
+At C:\users\dyerseve\Documents\GitHub\mhping\mhping.ps1:102 char:5
++     Rename-Item -NewName $newfilename -Path "C:\scripts\mhping\ping$C ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Rename-Item], PSInvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperation,Microsoft.PowerShell.Commands.RenameItemCommand
+Rename-Item : Cannot rename because item at 'C:\scripts\mhping\ping.csv' does not exist.
+At C:\users\dyerseve\Documents\GitHub\mhping\mhping.ps1:102 char:5
++     Rename-Item -NewName $newfilename -Path "C:\scripts\mhping\ping$C ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Rename-Item], PSInvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperation,Microsoft.PowerShell.Commands.RenameItemCommand
+
+2020-04-17T17-18-44-62
+C:\users\dyerseve\Documents\GitHub\mhping\results2020-04-17T17-18-44-62ping8.8.8.8.csv
+Rename-Item : Cannot rename because item at 'C:\scripts\mhping\ping.csv' does not exist.
+At C:\users\dyerseve\Documents\GitHub\mhping\mhping.ps1:102 char:5
++     Rename-Item -NewName $newfilename -Path "C:\scripts\mhping\ping$C ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Rename-Item], PSInvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperation,Microsoft.PowerShell.Commands.RenameItemCommand
+Rename-Item : Cannot rename because item at 'C:\scripts\mhping\ping.csv' does not exist.
+At C:\users\dyerseve\Documents\GitHub\mhping\mhping.ps1:102 char:5
++     Rename-Item -NewName $newfilename -Path "C:\scripts\mhping\ping$C ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Rename-Item], PSInvalidOperationException
+    + FullyQualifiedErrorId : InvalidOperation,Microsoft.PowerShell.Commands.RenameItemCommand
+
+**********************
+Windows PowerShell transcript end
+End time: 20200417171844
+**********************

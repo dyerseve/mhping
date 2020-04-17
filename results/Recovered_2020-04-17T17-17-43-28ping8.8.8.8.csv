@@ -1,0 +1,5 @@
+#TYPE System.Management.Automation.PSCustomObject
+"Time","Computer","ResponseTime"
+"2020-04-17 17:17:34","8.8.8.8","23"
+"2020-04-17 17:17:37","8.8.8.8","70"
+"2020-04-17 17:17:38","8.8.8.8","22"
