@@ -1,5 +1,0 @@
-#TYPE System.Management.Automation.PSCustomObject
-"Time","Computer","ResponseTime"
-"2020-04-17 17:17:35","192.168.98.1","2"
-"2020-04-17 17:17:37","192.168.98.1","3"
-"2020-04-17 17:17:38","192.168.98.1","2"
